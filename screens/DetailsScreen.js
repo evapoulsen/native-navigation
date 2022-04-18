@@ -11,7 +11,9 @@ function DetailsScreen({ route, navigation }) {
             <Text>Additional Parameters: {otherParam}</Text>
             <Button
                 title="Go to Level 3"
-                onPress={() =>  navigation.navigate('Level3')}
+                onPress={() =>  navigation.navigate('Level3', {
+                    userId: (userId)
+                })}
             />
         </View>
     );

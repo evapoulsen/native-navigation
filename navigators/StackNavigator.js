@@ -13,7 +13,11 @@ function StackNavigator() {
                 name="Home" 
                 component={HomeScreen}
                 options={{ title: 'Overview'}} />
-            <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen 
+                name="Details" 
+                component={DetailsScreen}
+                options={({ route }) => ({ title: route.params.name })}
+            />
             <Stack.Screen name="Level3" component={Level3Screen} />
         </Stack.Navigator>
     )
