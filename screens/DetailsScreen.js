@@ -1,10 +1,18 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
-function DetailsScreen() {
+function DetailsScreen({ route, navigation }) {
+    //get the parameters
+    const { userId, otherParam } = route.params;
     return (
         <View style={styles.viewStyle}>
             <Text>Details Screen</Text>
+            <Text>User ID: {userId}</Text>
+            <Text>Additional Parameters: {otherParam}</Text>
+            <Button
+                title="Go to Level 3"
+                onPress={() =>  navigation.navigate('Level3')}
+            />
         </View>
     );
 }
@@ -14,7 +22,7 @@ const styles = {
         flex: 1, 
         alignItems: 'center', 
         justifyContent: 'center',
-        backgroundColor: '#DDDDDD'
+        backgroundColor: '#A9BCF5'
     }
 }
 export default DetailsScreen;

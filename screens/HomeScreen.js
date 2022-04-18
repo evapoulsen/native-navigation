@@ -7,7 +7,11 @@ function HomeScreen({ navigation }) {
             <Text>Home Screen</Text>
             <Button
                 title="Go to Details"
-                onPress={() => navigation.navigate('Details')}
+                //send the params to the Details route
+                onPress={() => navigation.navigate('Details', {
+                    userId: 255,
+                    otherParam: 'whatever you want to send here',
+                })}
             />
         </View>
     );
