@@ -1,21 +1,20 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 
-function HomeScreen({ navigation }) {
+function HomeScreen() {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={styles.viewStyle}>
             <Text>Home Screen</Text>
-            <Button
-                title="Go to Details"
-                onPress={() => {
-                    navigation.navigate('Details', {
-                        username: 'Eva',
-                        workplace: 'BTECH',
-                    });
-                }}
-            />
         </View>
     );
 }
 
+const styles = {
+    viewStyle: {
+        flex: 1, 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        backgroundColor: '#DDDDDD'
+    }
+}
 export default HomeScreen;
