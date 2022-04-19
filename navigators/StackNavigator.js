@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Button } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/HomeScreen";
+import TabNavigator from "./TabNavigator";
 import DetailsScreen from "../screens/DetailsScreen";
 import Level3Screen from "../screens/Level3Screen";
 
@@ -37,7 +37,7 @@ function StackNavigator() {
             >
             <Stack.Screen 
                 name="Home" 
-                component={HomeScreen}
+                component={TabNavigator}
             />
             <Stack.Screen 
                 name="Details" 
