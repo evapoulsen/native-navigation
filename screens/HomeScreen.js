@@ -13,10 +13,10 @@ function HomeScreen({ navigation }) {
                     otherParam: 'whatever you want to send here',
                 })}
             />
-            <Button
+            {/* <Button
                 title="Update the title"
                 onPress={() => navigation.setOptions({ title: 'Updated!' })}
-            />
+            /> */}
         </View>
     );
 }
