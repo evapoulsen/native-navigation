@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
 import DetailsScreen from "../screens/DetailsScreen";
@@ -6,25 +7,30 @@ import Level3Screen from "../screens/Level3Screen";
 
 const Stack = createNativeStackNavigator();
 
+function LogoTitle() {
+    return (
+        <Image 
+            style={{ width: 40, height: 40 }}
+            source={require('../assets/logo1.png')}
+        />
+    );
+}
 function StackNavigator() {
     return (
         <Stack.Navigator 
             initialRouteName="Home"
             screenOptions={{
                 headerStyle: {
-                    backgroundColor: '#8258FA'
+                    backgroundColor: '#8258FA',
+                    height: 500,
                 },
                 headerTintColor: '#EEEEEE',
-                headerTitleStyle: {
-                    fontWeight: '300',
-                    fontSize: 30,
-                },
+                headerTitle: (props) => <LogoTitle {...props} />,
             }}
             >
             <Stack.Screen 
                 name="Home" 
                 component={HomeScreen}
-                options={{ title: 'Overview' }}
             />
             <Stack.Screen 
                 name="Details" 
