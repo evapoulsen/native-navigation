@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "react-native";
+import { Image, Button } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
 import DetailsScreen from "../screens/DetailsScreen";
@@ -26,6 +26,13 @@ function StackNavigator() {
                 },
                 headerTintColor: '#EEEEEE',
                 headerTitle: (props) => <LogoTitle {...props} />,
+                headerRight: () => (
+                    <Button
+                      onPress={() => alert('This is a button!')}
+                      title="Info"
+                      color="#fff"
+                    />
+                  ),
             }}
             >
             <Stack.Screen 
